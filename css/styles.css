@@ -11,16 +11,32 @@ body {
     margin: auto;
 }
 
-h1 {
+.h1hoofdpagina {
     color: #ffffff;
     font-size: 2.750em;
     font-family: Aspect;
     font-weight: 400;
     line-height: 1.2em;
-    margin: -10px;
-    max-width: 400px;
+    margin: auto;
+    max-width: 80%;
+    position: absolute;
+    width: 10em;
     text-shadow: 1px 1px 10px #000000;
     text-transform: uppercase;
+    margin-left: 5%;
+}
+
+.h1verhalen {
+    color: #06183D;
+    background-color: #A8E2EA;
+    margin: auto;
+    text-align: center;
+    font-size: 2.750em;
+    font-family: Aspect;
+    font-weight: 400;
+    line-height: 4em;
+    margin-bottom: 1em;
+    width: 100%;
 }
 
 h2 {
@@ -33,7 +49,7 @@ h2 {
     padding-bottom: 15px;
 }
 
-main span {
+main div {
     background-color: #24b5c9;
     display: block;
     height: 4px;
@@ -63,14 +79,70 @@ p {
 
 header nav {
     display: flex;
-    justify-content: space-between;
     padding: 1.5em;
     background-color: #06183D;
 }
 
-header nav img:nth-of-type(2) {
-    height: 22px;
+header nav img:first-of-type(1) {
+    height: 1.5em;
+}
+
+header nav a img:nth-of-type(1) {
     margin: auto;
+    height: 1.5em;
+}
+
+header nav a img:nth-of-type(2) {
+    display: none;
+}
+
+header nav a{
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Hamburger menu uitschuiven */
+
+header section ul li a {
+    color: #ffffff;
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: 1.8em;
+    text-decoration: none;
+    list-style: none;
+}
+
+header section ul li {
+    background-color: #F7F7F733;
+    margin-bottom: 0.3em;
+    padding: 0.5em;
+    list-style: none;
+}
+
+header section ul li:last-of-type {
+    background-color: #F7F7F715;
+    margin-bottom: 0;
+}
+
+header section ul {
+    background-color: #06183D;
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    left: -2.4em;
+}
+
+.UitklappenHamburgermenu {
+    position: relative;
+    z-index: 1;
+    transform: translate(-100%);
+    transition: .7s ease;
+    transform-style: preserve-3d;
+}
+
+.UitklappenHamburgermenu.active {
+    transform: translate(0);
+
 }
 
 /* Navigatiebalk Eurostar desktop */
@@ -84,6 +156,49 @@ header nav img:nth-of-type(2) {
 }
 
 
+/* Responsive menubalk */
+
+@media (min-width: 80em) {
+    /* Grote desktop */
+    header nav {
+        padding: 1em 0em 1em 1em;
+    }
+
+    header nav img,
+    header nav a img:nth-of-type(1) {
+        display: none;
+    }
+    header nav a img:last-of-type {
+        display: inline-block;
+        height: 8em;
+        margin: 0px;
+    }
+
+    .UitklappenHamburgermenu {
+        transform: none;
+        transition: none;
+        transform-style: none;
+    }
+
+
+
+    header section ul {
+        display: flex;
+        margin-left: 2em;
+    }
+
+    header section ul li:nth-of-type(3) {
+        margin-left: auto;
+        transform: translateX(-40%);
+    }
+
+    header section ul li {
+        margin-bottom: 0em;
+        margin-left: 0.2em;
+    }
+
+}
+
 /* Foto van de banner, 'welkom op de verhalen website' */
 
 #bannerfoto {
@@ -93,55 +208,38 @@ header nav img:nth-of-type(2) {
     border-bottom: 8px solid #24b5c9;
     margin-bottom: 25px;
     padding: 5em 5em 2em 2em;
-    max-width: 100%;
 }
 
 /* Header + knop */
 
-
 #randomverhaal {
     background-color: #FBDD0F;
+    display: inline-block;
     border-radius: 4px;
     box-shadow: #DEC204 0px 3px;
     color: #55565A;
     font-size: 1em;
     position: relative;
-    top: 40px;
+    top: 10.5em;
     padding: 12px 24px;
     text-decoration: none;
     text-transform: uppercase;
+    margin-left: 5%;
 }
 
-header a:hover,
+.randomverhaal:hover,
 main article a:hover,
 #toonresultaten:hover {
     background-color: #ffea6a;
     transition: all .2s ease-in-out;
 }
 
-/* Filteren en sorteren niet kloppend: */
 
-/*section header {
-    background-color: #ffffff;
-    Hieronder is een deel dat aangezet moet worden als de 'filteren en sorteren' knop wordt aangeklikt
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    padding: 10px;
-}*/
+/* Filteren en sorteren knoppen boven articles styling - mobiel */
 
-/*form {
-    background-color: #ffffff;
-    Hieronder is een deel dat aangezet moet worden als de 'filteren en sorteren' knop wordt aangeklikt
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    padding: 10px;
-}*/
-
-/* Filteren en sorteren knop bovenaan */
-
-#filteren {
+.filteren,
+h5,
+.buttonfilterensorteren {
     background-color: #ffffff;
     border-radius: 8px;
     color: #55565A;
@@ -150,25 +248,91 @@ main article a:hover,
     padding-left: 20px;
     padding: 10px;
     text-decoration: none;
+    border: none;
 }
 
-#filterenen:hover,
-    {
+.filterenen:hover {
     background-color: rgba(148, 148, 148, 0.2);
     transition: all .2s ease-in-out;
 }
 
-#filterensorterenhomepage {
+.filterensorterentelefoon {
     padding: 10px;
+    margin-left: 5%;
+    margin-bottom: 2em;
 }
 
-#filterensorterenhomepage img {
+.filterensorterentelefoon img,
+.filterensorterendesktop img {
     width: 10px;
     height: 10px;
 }
 
+.filterensorterendesktop {
+    display: none;
+}
+
 .hidden {
     display: none;
+}
+
+/* Filteren en sorteren knoppen boven articles styling - desktop en tablet */
+
+form {
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
+    display: inline-block;
+    width: 15em;
+    margin-left: 5%;
+    border-radius: 0.25em;
+    position: absolute;
+    padding: 1em;
+}
+
+form p {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+form input[type=radio] {
+    margin-left: 5%;
+    margin-bottom: 1.5em;
+}
+
+.keuzesform {
+    background-color: #ffffff;
+    color: #55565A;
+}
+
+#articles {
+    display: block;
+    background-color: white;
+}
+
+/* Radiobuttons styling */
+
+/*
+input[type=radio] {
+    opacity: 0;
+      cursor: pointer;
+}
+*/
+
+/*
+.radio input + label::before {
+    content:
+
+}
+*/
+
+
+#overlay {
+    content: " ";
+  position: absolute;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
 }
 
 /* De verhalen */
@@ -176,7 +340,7 @@ main article a:hover,
 article {
     background-color: #ffffff;
     border-color: rgb(230, 230, 231);
-    border-radius: 4px;
+    border-radius: 0.25em;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
     margin: 10px;
     height: 520px;
@@ -193,7 +357,6 @@ article section {
 article section img {
     padding-right: 5%;
     margin-top: 13px;
-    display: block;
 }
 
 article a {
@@ -353,7 +516,7 @@ main video {
 
 /* Responsive */
 
-@media (min-width: 45em)
+@media (min-width: 53em)
 /* Tablet */
 
     {
@@ -363,13 +526,52 @@ main video {
     video {
         display: none;
     }
-
-  
+    .filterensorterendesktop {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 5%;
+    }
+    .filterensorterentelefoon {
+        display: none;
+    }
 }
 
-@media (min-width: 60em) {
+@media (min-width: 80em) {
     /* Grote desktop */
-    #hamburger {
-        display: none;
-
+    header nav {
+        padding: 1em 0em 1em 1em;
     }
+
+    header nav img:nth-of-type(1),
+    header nav img:nth-of-type(2) {
+        display: none;
+    }
+    header nav a img:last-of-type {
+        display: inline-block;
+        height: 8em;
+        margin: 0px;
+    }
+
+    .UitklappenHamburgermenu {
+        transform: none;
+        transition: none;
+        transform-style: none;
+    }
+
+    header section ul {
+        display: flex;
+        margin-left: 2em;
+    }
+    header section ul li:nth-of-type(3) {
+        margin-left: auto;
+        transform: translateX(-40%);
+    }
+
+    header section ul li {
+        margin-bottom: 0em;
+        margin-left: 0.2em;
+    }
+
+}
+
+-------- transition ff uit zeten flex-grow

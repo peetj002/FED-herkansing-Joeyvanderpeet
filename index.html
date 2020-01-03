@@ -5,28 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--   Moet erin om je website te laten werken op je telefoon -->
-    <title>Eurostar</title>
+    <title>Eurostar homepage</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
     <header>
-        <nav id="mobielentablet"><img src="images/symbols/hamburger.svg" alt="hamburger" id="hamburger">
-            <img src="images/logoeurostar.svg" alt="Logo eurostar"></nav>
-
+        <nav id="mobielentablet"><img src="images/symbols/hamburger.svg" alt="hamburger" id="hamburgericon">
+            <a href="index.html"> <img src="images/logoeurostar.svg" alt="Logo eurostar"><img src="images/logo-banner-eurostar-desktop.png" alt=""></a>
+        </nav>
+        <section class="UitklappenHamburgermenu">
+            <ul>
+                <li><a href="">Bijna uitgelezen</a></li>
+                <li><a href="mijnleeslijst.html">Mijn leeslijst</a></li>
+                <li><a href="">Over deze website</a></li>
+            </ul>
+        </section>
 
         <section id="bannerfoto">
-            <h1>99 verhalen voor uw treinreis</h1>
+            <h1 class="h1hoofdpagina">99 verhalen voor uw treinreis</h1>
             <a href="" id="randomverhaal">Verras me</a>
         </section>
     </header>
+
     <main>
         <section class="header2">
             <h2>Alle verhalen</h2>
-            <span></span></section>
-        <section id="filterensorterenhomepage">
-            <a href="/filterenensorteren.html" id="filteren">Filteren en sorteren <img src="images/symbols/pijltjebeneden.svg" alt="pijltje"></a></section>
+            <div></div>
+        </section>
+        <section class="filterensorterentelefoon">
+            <a href="/filterenensorteren.html" class="filteren">Filteren en sorteren</a><img src="images/symbols/pijltjebeneden.svg" alt="pijltje"></section>
+        <section class="filterensorterendesktop">
+            <button type="button" class="buttonfilterensorteren">A-Z <img src="images/symbols/pijltjebeneden.svg" alt="pijltje"></button>
+            <button type="button" class="buttonfilterensorteren">Categorieën <img src="images/symbols/pijltjebeneden.svg" alt="pijltje"></button>
+            <button type="button" class="buttonfilterensorteren">Vertelperspectief <img src="images/symbols/pijltjebeneden.svg" alt="pijltje"></button>
+            <button type="button" class="buttonfilterensorteren">Taalgebruikfilter uit <img src="images/symbols/pijltjebeneden.svg" alt="pijltje"></button>
+        </section>
+        <form action="">
+           <p class="titelform">Sorteren</p>
+            <input type="radio" name="sorteren" value="az" checked="checked"><span></span><label class="keuzesform" for="az">A-Z</label><br>
+            <input type="radio" name="sorteren" value="za"><span></span><label class="keuzesform" for="za">Z-A</label><br>
+            <input type="radio" name="sorteren" value="199"><span></span><label class="keuzesform" for="199">1-99</label><br>
+            <input type="radio" name="sorteren" value="991"><span></span><label class="keuzesform" for="991">99-1</label><br>
+            <input type="radio" name="sorteren" value="Hoogste beoordeling"><span></span><label class="keuzesform" for="Hoogstebeoordeling">Hoogste beoordeling</label><br>
+            <input type="radio" name="sorteren" value="Meest bekeken"><span></span><label class="keuzesform" for="Meestbekeken">Meest bekeken</label><br>
+        </form>
+
         <section id="articles">
             <article>
                 <img src="images/verhaalpreview/Alzheimerbanner.png" alt="Alzheimer" class="fotopreview">
@@ -88,11 +113,14 @@
                 <a href="" class="leesmeer">Lees meer</a>
 
             </article>
+            
         </section>
+
     </main>
     <footer>
         <p>&copy; 2019 Eurostar International Ltd. Alle rechten voorbehouden</p>
     </footer>
+    <script src="js/fedherkansing.js"></script>
 </body>
 
 </html>
