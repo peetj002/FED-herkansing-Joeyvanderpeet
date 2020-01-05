@@ -30,13 +30,18 @@ body {
     color: #06183D;
     background-color: #A8E2EA;
     margin: auto;
+    margin-bottom: 0.5em;
     text-align: center;
     font-size: 2.750em;
     font-family: Aspect;
     font-weight: 400;
     line-height: 4em;
-    margin-bottom: 1em;
-    width: 100%;
+}
+
+@media (min-width: 80em) {
+    .h1verhalen {
+        margin-top: 1.3em;
+    }
 }
 
 h2 {
@@ -75,6 +80,11 @@ p {
     line-height: 24px;
 }
 
+.mainvanalleszonderverhalen {
+    margin: auto;
+    width: 90%;
+}
+
 /* Navigatiebalk Eurostar mobiel en tablet */
 
 header nav {
@@ -96,7 +106,7 @@ header nav a img:nth-of-type(2) {
     display: none;
 }
 
-header nav a{
+header nav a {
     display: flex;
     flex-grow: 1;
 }
@@ -136,7 +146,7 @@ header section ul {
     position: relative;
     z-index: 1;
     transform: translate(-100%);
-    transition: .7s ease;
+    transition: .5s ease;
     transform-style: preserve-3d;
 }
 
@@ -180,8 +190,6 @@ header section ul {
         transform-style: none;
     }
 
-
-
     header section ul {
         display: flex;
         margin-left: 2em;
@@ -197,7 +205,9 @@ header section ul {
         margin-left: 0.2em;
     }
 
+
 }
+
 
 /* Foto van de banner, 'welkom op de verhalen website' */
 
@@ -249,6 +259,14 @@ h5,
     padding: 10px;
     text-decoration: none;
     border: none;
+    margin-right: 0.5em;
+    transition: .5s ease;
+}
+
+.buttonfilterensorteren.active {
+    background-color: #028097;
+    color: #ffffff;
+    transition: .5s ease;
 }
 
 .filterenen:hover {
@@ -272,6 +290,14 @@ h5,
     display: none;
 }
 
+.filterensorterendesktop img:nth-of-type(1) {
+    transition: .5s ease-in-out;
+}
+
+.filterensorterendesktop img:nth-of-type(1).active {
+    transform: rotate(180deg);
+}
+
 .hidden {
     display: none;
 }
@@ -281,12 +307,19 @@ h5,
 form {
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
-    display: inline-block;
+    display: none;
     width: 15em;
-    margin-left: 5%;
+    margin-top: 0.3em;
     border-radius: 0.25em;
     position: absolute;
     padding: 1em;
+    opacity: 0%;
+    transition: .5s ease-in-out;
+}
+
+form.active {
+    opacity: 100%;
+    z-index: 1;
 }
 
 form p {
@@ -304,9 +337,25 @@ form input[type=radio] {
     color: #55565A;
 }
 
-#articles {
-    display: block;
-    background-color: white;
+#Sorterenplaatsing {
+    margin-left: 5%;
+}
+
+#Categorieenplaatsing {
+    margin-left: 10%;
+    z-index: 3;
+    opacity: 0%;
+}
+
+#Categorieenplaatsing.active {
+    opacity: 100%;
+}
+
+
+@media (min-width: 53em) {
+    form {
+        display: inline-block;
+    }
 }
 
 /* Radiobuttons styling */
@@ -324,16 +373,6 @@ input[type=radio] {
 
 }
 */
-
-
-#overlay {
-    content: " ";
-  position: absolute;
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 10;
-}
 
 /* De verhalen */
 
@@ -359,13 +398,14 @@ article section img {
     margin-top: 13px;
 }
 
-article a {
+article a, .toevoegenaanlijst {
     background-color: #FBDD0F;
     box-shadow: #DEC204 0px 3px;
     border-radius: 4px;
     color: #55565A;
     display: flex;
     justify-content: center;
+    position: relative;
     font-size: 1em;
     font-weight: 700;
     padding: 9px 24px;
@@ -394,6 +434,41 @@ main article {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
+
+/* Bijna uitgelezen verhalen */
+
+.bijnauitgelezen a {
+    position: relative;
+    top: 12em;
+}
+
+.bijnauitgelezen:nth-of-type(2) a {
+    top: 8.7em;
+}
+
+.bijnauitgelezen img {
+    /*    border-bottom: 1em double #24b5c9;*/
+}
+
+.bijnauitgelezen div {
+    background-color: #24b5c9;
+    display: inline-block;
+    height: 0.4em;
+    position: relative;
+    width: 15em;
+    margin-bottom: 1em;
+    z-index: 1;
+}
+
+.bijnauitgelezen:nth-of-type(2) div {
+    width: 3em;
+}
+
+.bijnauitgelezen h3 {
+    margin-top: 0em;
+}
+
+
 
 /* Footer */
 
@@ -496,21 +571,36 @@ section header h4 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    margin-left: 5%;
+    opacity: 100%;
+    transition: .5s ease;
 }
 
+#articles.active {
+    opacity: 30%;
+}
+
+article {
+    flex-basis: auto;
+    flex: 0 1 auto;
+}
 
 /* Alzheimer verhaal */
 
 main video {
-    position: relative;
-    top: 52px;
-    left: -10px;
-    width: 105%;
+    width: 100%;
 }
 
 #desktopversie {
     display: none;
+}
+img:first-of-type {
+    margin-left: 5%
+}
+
+.beooordelingenopslaan {
+    display: flex;
+    flex-direction: row;
 }
 
 
@@ -549,7 +639,7 @@ main video {
     header nav a img:last-of-type {
         display: inline-block;
         height: 8em;
-        margin: 0px;
+        margin-left: 5%
     }
 
     .UitklappenHamburgermenu {
@@ -562,14 +652,21 @@ main video {
         display: flex;
         margin-left: 2em;
     }
+    header section ul li:nth-of-type(1) {
+        margin-left: 5%
+    }
     header section ul li:nth-of-type(3) {
         margin-left: auto;
+        margin-right: 5%;
         transform: translateX(-40%);
     }
 
     header section ul li {
         margin-bottom: 0em;
         margin-left: 0.2em;
+    }
+    .current {
+        border-top: 4px solid #FBDD0F;
     }
 
 }

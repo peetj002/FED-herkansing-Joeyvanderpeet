@@ -17,7 +17,7 @@
         </nav>
         <section class="UitklappenHamburgermenu">
             <ul>
-                <li><a href="">Bijna uitgelezen</a></li>
+                <li><a href="bijnauitgelezen.html">Bijna uitgelezen</a></li>
                 <li><a href="mijnleeslijst.html">Mijn leeslijst</a></li>
                 <li><a href="">Over deze website</a></li>
             </ul>
@@ -25,11 +25,11 @@
 
         <section id="bannerfoto">
             <h1 class="h1hoofdpagina">99 verhalen voor uw treinreis</h1>
-            <a href="" id="randomverhaal">Verras me</a>
+            <a href="verhaalalzheimer.html" id="randomverhaal">Verras me</a>
         </section>
     </header>
 
-    <main>
+    <main class="mainvanalleszonderverhalen">
         <section class="header2">
             <h2>Alle verhalen</h2>
             <div></div>
@@ -42,8 +42,9 @@
             <button type="button" class="buttonfilterensorteren">Vertelperspectief <img src="images/symbols/pijltjebeneden.svg" alt="pijltje"></button>
             <button type="button" class="buttonfilterensorteren">Taalgebruikfilter uit <img src="images/symbols/pijltjebeneden.svg" alt="pijltje"></button>
         </section>
-        <form action="">
-           <p class="titelform">Sorteren</p>
+
+        <form action="" id="Sorterenplaatsing">
+            <p class="titelform">Sorteren</p>
             <input type="radio" name="sorteren" value="az" checked="checked"><span></span><label class="keuzesform" for="az">A-Z</label><br>
             <input type="radio" name="sorteren" value="za"><span></span><label class="keuzesform" for="za">Z-A</label><br>
             <input type="radio" name="sorteren" value="199"><span></span><label class="keuzesform" for="199">1-99</label><br>
@@ -52,12 +53,26 @@
             <input type="radio" name="sorteren" value="Meest bekeken"><span></span><label class="keuzesform" for="Meestbekeken">Meest bekeken</label><br>
         </form>
 
+        <form action="" id="Categorieenplaatsing">
+            <p class="titelform">Categorieën</p>
+            <input type="checkbox" name="categorieen" value="agressief"><span></span><label class="keuzesform" for="agressief">Agressief (4)</label><br>
+            <input type="checkbox" name="categorieen" value="beknopt"><span></span><label class="keuzesform" for="beknopt">Beknopt (6)</label><br>
+            <input type="checkbox" name="categorieen" value="bekendemensen"><span></span><label class="keuzesform" for="bekendemensen">Bekende mensen (17)</label><br>
+            <input type="checkbox" name="categorieen" value="chagerijnig"><span></span><label class="keuzesform" for="chagerijnig">Chagerijnig (8)</label><br>
+            <input type="checkbox" name="categorieen" value="drama"><span></span><label class="keuzesform" for="drama">Drama (8)</label><br>
+            <input type="checkbox" name="categorieen" value="grappig"><span></span><label class="keuzesform" for="grappig">Grappig (25)</label><br>
+            <input type="checkbox" name="categorieen" value="mysteriespanning"><span></span><label class="keuzesform" for="mysteriespanning">Mysterie en spanning (15)</label><br>
+            <input type="checkbox" name="categorieen" value="poetisch"><span></span><label class="keuzesform" for="poetisch">Poetisch (9)</label><br>
+            <input type="checkbox" name="categorieen" value="serieus"><span></span><label class="keuzesform" for="serieus">Serieus (8)</label><br>
+            <input type="checkbox" name="categorieen" value="verwarrend"><span></span><label class="keuzesform" for="verwarrend">Verwarrend (8)</label><br>
+            <input type="checkbox" name="categorieen" value="vrolijk"><span></span><label class="keuzesform" for="vrolijk">Vrolijk (8)</label><br>
+        </form>
         <section id="articles">
             <article>
                 <img src="images/verhaalpreview/Alzheimerbanner.png" alt="Alzheimer" class="fotopreview">
                 <section>
                     <h3>Alzheimer</h3> <img src="/images/symbols/toevoegenaanlijst.svg" alt="toevoegenaanlijst"></section>
-                <img src="images/star.svg" alt="Beoordeling sterren" id="ster"><img src="images/star.svg" alt="Beoordeling sterren" class="sterren"><img src="images/star.svg" alt="Beoordeling sterren" class="sterren">
+                <img src="images/symbols/stervol.svg" alt="Beoordeling sterren" id="ster"><img src="images/symbols/stervol.svg" alt="Beoordeling sterren" class="sterren"><img src="images/symbols/stervol.svg" alt="Beoordeling sterren" class="sterren">
 
                 <p>Ik stap uit, euh... Hoe heet het? Zo’n vervoersdinges op wielen. Van de gemeente. Wit met blauw. Kom. Lijn 12. Of was het 21? Ik weet het niet. Ik stap uit en loop achter een wagentje aan. Van wie is dat wagentje? Ik weet het niet. Ik kijk in het wagentje. Er ligt een ventje in.</p>
                 <a href="/verhaalalzheimer.html" class="leesmeer">Lees meer</a>
@@ -67,7 +82,7 @@
                 <img src="images/verhaalpreview/gefrustreerdbanner.jpg" alt="Gefrustreerd" class="fotopreview">
                 <section>
                     <h3>Gefrustreerd</h3> <img src="/images/symbols/toevoegenaanlijst.svg" alt="toevoegenaanlijst"></section>
-                <img src="images/star.svg" alt="Beoordeling sterren" id="ster"><img src="images/star.svg" alt="Beoordeling sterren" class="sterren"><img src="images/star.svg" alt="Beoordeling sterren" class="sterren">
+                <img src="images/symbols/stervol.svg" alt="Beoordeling sterren" id="ster"><img src="images/symbols/stervol.svg" alt="Beoordeling sterren" class="sterren"><img src="images/symbols/stervol.svg" alt="Beoordeling sterren" class="sterren">
 
                 <p>Ik stap uit die godverdomde stinkbus. De mensen krioelen als mieren over het stationsplein. Ik wil ze vertrappen onder m’n schoenen. Vermorzelen. Verbrijzelen. De klootzakken en kakkerlakken. Met hun nietszeggende leventjes en hun waardeloze gedachten.</p>
                 <a href="" class="leesmeer">Lees meer</a>
@@ -77,7 +92,7 @@
                 <img src="images/verhaalpreview/paranoiabanner.jpg" alt="Paranoia" class="fotopreview">
                 <section>
                     <h3>Paranoia</h3> <img src="/images/symbols/toevoegenaanlijst.svg" alt="toevoegenaanlijst"></section>
-                <img src="images/star.svg" alt="Beoordeling sterren" id="ster"><img src="images/star.svg" alt="Beoordeling sterren" class="sterren"><img src="images/star.svg" alt="Beoordeling sterren" class="sterren">
+                <img src="images/symbols/stervol.svg" alt="Beoordeling sterren" id="ster"><img src="images/symbols/stervol.svg" alt="Beoordeling sterren" class="sterren"><img src="images/symbols/stervol.svg" alt="Beoordeling sterren" class="sterren">
 
                 <p>Ik sluip de bus uit. Kop in de kraag. Ik maak me klein en duw m’n zoon vooruit. Hij slaapt. Eindelijk. Zijn gejengel trok veel te veel aandacht. De mensen lopen over het stationsplein. Het voelt alsof er een grote, knipperende pijl boven m’n hoofd hangt: HIER LOOPT HIJ!</p>
                 <a href="" class="leesmeer">Lees meer</a>
@@ -87,7 +102,7 @@
                 <img src="images/verhaalpreview/poepenbanner.jpg" alt="Poepen" class="fotopreview">
                 <section>
                     <h3>Poepen</h3> <img src="/images/symbols/toevoegenaanlijst.svg" alt="toevoegenaanlijst"></section>
-                <img src="images/star.svg" alt="Beoordeling sterren" id="ster"><img src="images/star.svg" alt="Beoordeling sterren" class="sterren"><img src="images/star.svg" alt="Beoordeling sterren" class="sterren">
+                <img src="images/symbols/stervol.svg" alt="Beoordeling sterren" id="ster"><img src="images/symbols/stervol.svg" alt="Beoordeling sterren" class="sterren"><img src="images/symbols/stervol.svg" alt="Beoordeling sterren" class="sterren">
 
                 <p>Het welhaast slaapwekkende geschud van de bus heeft er voor gezorgd dat ik, tegen de tijd dat ik moet uitstappen (ter hoogte van Centraal Station Amsterdam) ontzettend nodig moet poepen. Ik ren achter de kinderwagen aan richting de Openbare Bibliotheek...</p>
                 <a href="" class="leesmeer">Lees meer</a>
@@ -97,7 +112,7 @@
                 <img src="images/verhaalpreview/presentatorbanner.png" alt="Presentator die ten onrechte denkt aansluiting te hebben gevonden bij ‘de kids’" class="fotopreview">
                 <section>
                     <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij ‘de kids’</h3> <img src="/images/symbols/toevoegenaanlijst.svg" alt="toevoegenaanlijst"></section>
-                <img src="images/star.svg" alt="Beoordeling sterren" id="ster"><img src="images/star.svg" alt="Beoordeling sterren" class="sterren"><img src="images/star.svg" alt="Beoordeling sterren" class="sterren">
+                <img src="images/symbols/stervol.svg" alt="Beoordeling sterren" id="ster"><img src="images/symbols/stervol.svg" alt="Beoordeling sterren" class="sterren"><img src="images/symbols/stervol.svg" alt="Beoordeling sterren" class="sterren">
 
                 <p>Yo kids! Vet cool dat je weer kijkt! Hoor mijn verhaal: Ik stapte laatst de bus uit op het stadionplein. Je weet togh? Ik duwde mijn zoon die in zijn superlauwe, gifgroene kinderwagen... </p>
                 <a href="" class="leesmeer">Lees meer</a>
@@ -107,18 +122,18 @@
                 <img src="images/verhaalpreview/twitterbanner.jpg" alt="Twitter" class="fotopreview">
                 <section>
                     <h3>Twitter</h3> <img src="/images/symbols/toevoegenaanlijst.svg" alt="toevoegenaanlijst"></section>
-                <img src="images/star.svg" alt="Beoordeling sterren" id="ster"><img src="images/star.svg" alt="Beoordeling sterren" class="sterren"><img src="images/star.svg" alt="Beoordeling sterren" class="sterren">
+                <img src="images/symbols/stervol.svg" alt="Beoordeling sterren" id="ster"><img src="images/symbols/stervol.svg" alt="Beoordeling sterren" class="sterren"><img src="images/symbols/stervol.svg" alt="Beoordeling sterren" class="sterren">
 
                 <p>@molovich <br> Schoenen gekocht voor Junior. Op twintig meter afstand van m’n huis. #tochnoggeslaagd #kosteenpaaruurtjesmaardanhebjeookwa <br> 2 minutes ago <br> @molovich In bus terug naar huis. Balen.</p>
                 <a href="" class="leesmeer">Lees meer</a>
 
             </article>
-            
+
         </section>
 
     </main>
     <footer>
-        <p>&copy; 2019 Eurostar International Ltd. Alle rechten voorbehouden</p>
+        <p>&copy; 2020 Eurostar International Ltd. Alle rechten voorbehouden</p>
     </footer>
     <script src="js/fedherkansing.js"></script>
 </body>
