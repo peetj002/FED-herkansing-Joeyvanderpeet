@@ -594,9 +594,11 @@ main video {
 #desktopversie {
     display: none;
 }
+/*
 img:first-of-type {
     margin-left: 5%
 }
+*/
 
 .beooordelingenopslaan {
     display: flex;
