@@ -38,7 +38,7 @@ body {
     line-height: 4em;
 }
 
-@media (min-width: 80em) {
+@media (min-width: 78em) {
     .h1verhalen {
         margin-top: 1.3em;
     }
@@ -168,7 +168,7 @@ header section ul {
 
 /* Responsive menubalk */
 
-@media (min-width: 80em) {
+@media (min-width: 78em) {
     /* Grote desktop */
     header nav {
         padding: 1em 0em 1em 1em;
@@ -628,7 +628,7 @@ img:first-of-type {
     }
 }
 
-@media (min-width: 80em) {
+@media (min-width: 78em) {
     /* Grote desktop */
     header nav {
         padding: 1em 0em 1em 1em;
