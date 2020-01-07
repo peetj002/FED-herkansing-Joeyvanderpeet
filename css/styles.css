@@ -129,7 +129,7 @@ header section ul li {
     list-style: none;
 }
 
-header section ul li:last-of-type {
+header section ul li:nth-of-type(3), header section ul li:nth-of-type(4) {
     background-color: #F7F7F715;
     margin-bottom: 0;
 }
@@ -196,7 +196,6 @@ header section ul {
     }
 
     header section ul li:nth-of-type(3) {
-        margin-left: auto;
         transform: translateX(-40%);
     }
 
@@ -304,7 +303,7 @@ h5,
 
 /* Filteren en sorteren knoppen boven articles styling - desktop en tablet */
 
-form {
+#Sorterenplaatsing, #Categorieenplaatsing  {
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
     display: none;
@@ -317,17 +316,17 @@ form {
     transition: .5s ease-in-out;
 }
 
-form.active {
+#Sorterenplaatsing.active, #Categorieenplaatsing.active {
     opacity: 100%;
     z-index: 1;
 }
 
-form p {
+#Sorterenplaatsing, #Categorieenplaatsing {
     font-size: 1.2em;
     margin-bottom: 0.5em;
 }
 
-form input[type=radio] {
+#Sorterenplaatsing form input[type=radio],  #Categorieenplaatsing form input[type=radio] {
     margin-left: 5%;
     margin-bottom: 1.5em;
 }
@@ -353,7 +352,7 @@ form input[type=radio] {
 
 
 @media (min-width: 53em) {
-    form {
+    #Sorterenplaatsing, #Categorieenplaatsing {
         display: inline-block;
     }
 }
@@ -628,7 +627,7 @@ img:first-of-type {
     }
 }
 
-@media (min-width: 85em) {
+@media (min-width: 80em) {
     /* Grote desktop */
     header nav {
         padding: 1em 0em 1em 1em;
@@ -641,7 +640,7 @@ img:first-of-type {
     header nav a img:last-of-type {
         display: inline-block;
         height: 8em;
-        margin-left: 5%
+        margin-left: 5%;
     }
 
     .UitklappenHamburgermenu {
@@ -652,14 +651,12 @@ img:first-of-type {
 
     header section ul {
         display: flex;
-        margin-left: 2em;
     }
     header section ul li:nth-of-type(1) {
         margin-left: 5%
     }
     header section ul li:nth-of-type(3) {
         margin-left: auto;
-        margin-right: 5%;
         transform: translateX(-40%);
     }
 
@@ -673,4 +670,8 @@ img:first-of-type {
 
 }
 
+
+.inlogpagina {
+    
+}
 -------- transition ff uit zeten flex-grow
