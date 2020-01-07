@@ -23,7 +23,7 @@ body {
     width: 10em;
     text-shadow: 1px 1px 10px #000000;
     text-transform: uppercase;
-    margin-left: 5%;
+    margin-left: 7%;
 }
 
 .h1verhalen {
@@ -129,7 +129,8 @@ header section ul li {
     list-style: none;
 }
 
-header section ul li:nth-of-type(3), header section ul li:nth-of-type(4) {
+header section ul li:nth-of-type(3),
+header section ul li:nth-of-type(4) {
     background-color: #F7F7F715;
     margin-bottom: 0;
 }
@@ -233,7 +234,7 @@ header section ul {
     padding: 12px 24px;
     text-decoration: none;
     text-transform: uppercase;
-    margin-left: 5%;
+    margin-left: 7%;
 }
 
 .randomverhaal:hover,
@@ -303,7 +304,8 @@ h5,
 
 /* Filteren en sorteren knoppen boven articles styling - desktop en tablet */
 
-#Sorterenplaatsing, #Categorieenplaatsing  {
+#Sorterenplaatsing,
+#Categorieenplaatsing {
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
     display: none;
@@ -316,17 +318,19 @@ h5,
     transition: .5s ease-in-out;
 }
 
-#Sorterenplaatsing.active, #Categorieenplaatsing.active {
+#Sorterenplaatsing.active,
+#Categorieenplaatsing.active {
     opacity: 100%;
     z-index: 1;
 }
 
-#Sorterenplaatsing, #Categorieenplaatsing {
+#Sorterenplaatsing,
+#Categorieenplaatsing {
     font-size: 1.2em;
     margin-bottom: 0.5em;
 }
 
-#Sorterenplaatsing form input[type=radio],  #Categorieenplaatsing form input[type=radio] {
+#Sorterenplaatsing input[type=radio] {
     margin-left: 5%;
     margin-bottom: 1.5em;
 }
@@ -334,6 +338,7 @@ h5,
 .keuzesform {
     background-color: #ffffff;
     color: #55565A;
+    font-size: .9em;
 }
 
 #Sorterenplaatsing {
@@ -352,7 +357,8 @@ h5,
 
 
 @media (min-width: 53em) {
-    #Sorterenplaatsing, #Categorieenplaatsing {
+    #Sorterenplaatsing,
+    #Categorieenplaatsing {
         display: inline-block;
     }
 }
@@ -397,7 +403,8 @@ article section img {
     margin-top: 13px;
 }
 
-article a, .toevoegenaanlijst {
+article a,
+.toevoegenaanlijst {
     background-color: #FBDD0F;
     box-shadow: #DEC204 0px 3px;
     border-radius: 4px;
@@ -593,6 +600,7 @@ main video {
 #desktopversie {
     display: none;
 }
+
 /*
 img:first-of-type {
     margin-left: 5%
@@ -627,6 +635,7 @@ img:first-of-type {
     }
 }
 
+
 @media (min-width: 80em) {
     /* Grote desktop */
     header nav {
@@ -653,7 +662,7 @@ img:first-of-type {
         display: flex;
     }
     header section ul li:nth-of-type(1) {
-        margin-left: 5%
+        margin-left: 7%;
     }
     header section ul li:nth-of-type(3) {
         margin-left: auto;
@@ -671,7 +680,6 @@ img:first-of-type {
 }
 
 
-.inlogpagina {
-    
-}
+.inlogpagina {}
+
 -------- transition ff uit zeten flex-grow
