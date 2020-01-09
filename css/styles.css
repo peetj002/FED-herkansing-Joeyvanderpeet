@@ -1,5 +1,9 @@
 /* Algemene onderdelen */
 
+* {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'Aspect';
     src: url('fonts/AspectRegular.otf');
@@ -9,6 +13,7 @@ body {
     background-color: #FFFFFF;
     font-family: Arial, sans-serif;
     margin: auto;
+    //font-size: 80%;
 }
 
 .h1hoofdpagina {
@@ -23,8 +28,9 @@ body {
     width: 10em;
     text-shadow: 1px 1px 10px #000000;
     text-transform: uppercase;
-    margin-left: 7%;
+    margin-left: 3%;
 }
+
 
 .h1verhalen {
     color: #06183D;
@@ -38,9 +44,11 @@ body {
     line-height: 4em;
 }
 
-@media (min-width: 85em) {
+@media (min-width: 80em) {
     .h1verhalen {
-        margin-top: 1.3em;
+        position: relative;
+        top: 1.2em;
+        margin-bottom: 2em;
     }
 }
 
@@ -82,7 +90,6 @@ p {
 
 .mainvanalleszonderverhalen {
     margin: auto;
-    width: 90%;
 }
 
 /* Navigatiebalk Eurostar mobiel en tablet */
@@ -132,6 +139,9 @@ header section ul li {
 header section ul li:nth-of-type(3),
 header section ul li:nth-of-type(4) {
     background-color: #F7F7F715;
+}
+
+header section ul li:nth-of-type(4) {
     margin-bottom: 0;
 }
 
@@ -140,7 +150,7 @@ header section ul {
     margin: auto;
     width: 100%;
     position: absolute;
-    left: -2.4em;
+    padding-left: 0%;
 }
 
 .UitklappenHamburgermenu {
@@ -169,20 +179,47 @@ header section ul {
 
 /* Responsive menubalk */
 
-@media (min-width: 85em) {
+@media (min-width: 80em) {
     /* Grote desktop */
     header nav {
-        padding: 1em 0em 1em 1em;
+        padding: 0em;
+    }
+
+    header nav a img:last-of-type {
+        display: inline-block;
+        height: 8em;
+        margin-left: 5%;
+    }
+
+    .UitklappenHamburgermenu {
+        transform: none;
+        transition: none;
+        transform-style: none;
+    }
+
+    header section ul li:nth-of-type(1) {
+        margin-left: 5%;
+    }
+    header section ul li:nth-of-type(3) {
+        margin-left: auto;
+    }
+
+    header section ul li:nth-of-type(4) {
+        margin-right: 5%;
+    }
+
+    header section ul li {
+        margin-bottom: 0em;
+        margin-left: 0.2em;
+    }
+
+    .current {
+        box-shadow: 0px 7px 0px 0px #FBDD0F inset;
     }
 
     header nav img,
     header nav a img:nth-of-type(1) {
         display: none;
-    }
-    header nav a img:last-of-type {
-        display: inline-block;
-        height: 8em;
-        margin: 0px;
     }
 
     .UitklappenHamburgermenu {
@@ -193,19 +230,13 @@ header section ul {
 
     header section ul {
         display: flex;
-        margin-left: 2em;
-    }
-
-    header section ul li:nth-of-type(3) {
-        transform: translateX(-40%);
     }
 
     header section ul li {
         margin-bottom: 0em;
         margin-left: 0.2em;
+
     }
-
-
 }
 
 
@@ -214,7 +245,7 @@ header section ul {
 #bannerfoto {
     background-image: url('../images/headerfoto.jpg');
     background-size: cover;
-    height: 13em;
+    height: 22em;
     border-bottom: 8px solid #24b5c9;
     margin-bottom: 25px;
     padding: 5em 5em 2em 2em;
@@ -234,7 +265,7 @@ header section ul {
     padding: 12px 24px;
     text-decoration: none;
     text-transform: uppercase;
-    margin-left: 7%;
+    margin-left: 3%;
 }
 
 .randomverhaal:hover,
@@ -247,8 +278,8 @@ main article a:hover,
 
 /* Filteren en sorteren knoppen boven articles styling - mobiel */
 
-.filteren,
 h5,
+.filteren,
 .buttonfilterensorteren {
     background-color: #ffffff;
     border-radius: 8px;
@@ -277,7 +308,6 @@ h5,
 .filterensorterentelefoon {
     padding: 10px;
     margin-left: 5%;
-    margin-bottom: 2em;
 }
 
 .filterensorterentelefoon img,
@@ -387,7 +417,7 @@ article {
     border-radius: 0.25em;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
     margin: 10px;
-    height: 520px;
+    height: 33em;
     margin-bottom: 30px;
     max-width: 410px;
     padding-bottom: 10px;
@@ -400,7 +430,11 @@ article section {
 
 article section img {
     padding-right: 5%;
-    margin-top: 13px;
+    margin-top: 1em;
+}
+
+article:nth-of-type(5) section img:nth-of-type(1) {
+    margin-bottom: 3em;
 }
 
 article a,
@@ -586,11 +620,6 @@ section header h4 {
     opacity: 30%;
 }
 
-article {
-    flex-basis: auto;
-    flex: 0 1 auto;
-}
-
 /* Alzheimer verhaal */
 
 main video {
@@ -601,16 +630,32 @@ main video {
     display: none;
 }
 
-/*
-img:first-of-type {
-    margin-left: 5%
+.beoordelingenverhaal h3 {
+    padding: 0;
+    text-align: center;
 }
-*/
 
-.beooordelingenopslaan {
-    display: flex;
-    flex-direction: row;
+.beoordelingenverhaal section section:nth-of-type(1) {
+    margin: auto;
+    width: 12em;
 }
+
+.beoordelingenverhaal a {
+    max-width: 30em;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+@media (min-width: 53em) {
+
+    .beoordelingenverhaal {
+        display: flex;
+        justify-content: space-between;
+        max-width: 60%;
+        margin: auto;
+    }
+}
+
 
 
 /* Responsive */
@@ -636,48 +681,7 @@ img:first-of-type {
 }
 
 
-@media (min-width: 80em) {
-    /* Grote desktop */
-    header nav {
-        padding: 1em 0em 1em 1em;
-    }
 
-    header nav img:nth-of-type(1),
-    header nav img:nth-of-type(2) {
-        display: none;
-    }
-    header nav a img:last-of-type {
-        display: inline-block;
-        height: 8em;
-        margin-left: 5%;
-    }
-
-    .UitklappenHamburgermenu {
-        transform: none;
-        transition: none;
-        transform-style: none;
-    }
-
-    header section ul {
-        display: flex;
-    }
-    header section ul li:nth-of-type(1) {
-        margin-left: 7%;
-    }
-    header section ul li:nth-of-type(3) {
-        margin-left: auto;
-        transform: translateX(-40%);
-    }
-
-    header section ul li {
-        margin-bottom: 0em;
-        margin-left: 0.2em;
-    }
-    .current {
-        border-top: 4px solid #FBDD0F;
-    }
-
-}
 
 
 .inlogpagina {}
