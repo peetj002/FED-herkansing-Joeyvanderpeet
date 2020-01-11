@@ -5,14 +5,15 @@
 }
 
 @font-face {
-    font-family: Aspect;
-    src: url(fonts/AspectRegular.otf);
+    font-family: "Aspect";
+    src: local("fonts/AspectRegular.otf") format("otf")
 }
 
 body {
     background-color: #FFFFFF;
     font-family: Arial, sans-serif;
-    margin: auto; //font-size: 80%;
+    margin: auto;
+    font-size: 80%;
 }
 
 .h1hoofdpagina {
