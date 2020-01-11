@@ -12,29 +12,33 @@
         <nav id="mobielentablet"><img src="images/symbols/hamburger.svg" alt="hamburger" id="hamburgericon">
             <a href="index.html"> <img src="images/logoeurostar.svg" alt="Logo eurostar"><img src="images/logo-banner-eurostar-desktop.png" alt=""></a>
         </nav>
-         <section class="UitklappenHamburgermenu">
+        <section class="UitklappenHamburgermenu">
             <ul>
                 <li><a href="bijnauitgelezen.html">Bijna uitgelezen</a></li>
                 <li><a href="mijnleeslijst.html">Mijn leeslijst</a></li>
-                <li><a href="inlogpagina.html">Inloggen</a></li>
+                <li class="current"><a href="inlogpagina.html">Inloggen</a></li>
                 <li><a href="">Over deze website</a></li>
             </ul>
         </section>
 
         <h1 class="h1verhalen">Inloggen</h1>
     </header>
-
-
-    <form action="" class="inlogpagina">
-        <legend>Inloggen</legend>
-        <label for="email">E-mailadres</label>
-     <input type="email" id="email" placeholder="voorbeeld@voorbeeld.nl" size="40" required><br>
-     <label for="wachtwoord">Wachtwoord</label>
-     <input type="password" id="password" autocomplete="on" size="40" required><br>
-     <input type="submit" value="Log in">
-     
-    </form>
-<footer>
+    <main class="inlogpagina">
+        <button>Inloggen</button>
+        <button>Inschrijven</button>
+        <form action="" class="inlog">
+<fieldset>
+            <label for="email">E-mailadres</label>
+            <input type="email" id="email" placeholder="voorbeeld@voorbeeld.nl" size="40" required>
+            <label for="wachtwoord">Wachtwoord</label>
+            <input type="password" id="password" placeholder="" autocomplete="on" size="40" required>
+            
+            <input type="submit" value="Log in">
+</fieldset>
+        </form>
+    </main>
+    <form action="" class=""></form>
+    <footer>
         <p>&copy; 2020 Eurostar International Ltd. Alle rechten voorbehouden</p>
     </footer>
     <script src="js/fedherkansing.js"></script>

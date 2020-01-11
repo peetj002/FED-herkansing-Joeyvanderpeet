@@ -5,15 +5,14 @@
 }
 
 @font-face {
-    font-family: 'Aspect';
-    src: url('fonts/AspectRegular.otf');
+    font-family: Aspect;
+    src: url(fonts/AspectRegular.otf);
 }
 
 body {
     background-color: #FFFFFF;
     font-family: Arial, sans-serif;
-    margin: auto;
-    //font-size: 80%;
+    margin: auto; //font-size: 80%;
 }
 
 .h1hoofdpagina {
@@ -44,7 +43,7 @@ body {
     line-height: 4em;
 }
 
-@media (min-width: 80em) {
+@media (min-width: 84.9em) {
     .h1verhalen {
         position: relative;
         top: 1.2em;
@@ -179,7 +178,8 @@ header section ul {
 
 /* Responsive menubalk */
 
-@media (min-width: 80em) {
+@media (min-width: 84.9em) {
+
     /* Grote desktop */
     header nav {
         padding: 0em;
@@ -200,6 +200,7 @@ header section ul {
     header section ul li:nth-of-type(1) {
         margin-left: 5%;
     }
+
     header section ul li:nth-of-type(3) {
         margin-left: auto;
     }
@@ -214,7 +215,7 @@ header section ul {
     }
 
     .current {
-        box-shadow: 0px 7px 0px 0px #FBDD0F inset;
+        box-shadow: 0px 4px 0px 0px #FBDD0F inset;
     }
 
     header nav img,
@@ -335,10 +336,10 @@ h5,
 /* Filteren en sorteren knoppen boven articles styling - desktop en tablet */
 
 #Sorterenplaatsing,
-#Categorieenplaatsing {
+#Categorieenplaatsing,
+#Vertelperspectiefplaatsing {
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
-    display: none;
     width: 15em;
     margin-top: 0.3em;
     border-radius: 0.25em;
@@ -351,7 +352,7 @@ h5,
 #Sorterenplaatsing.active,
 #Categorieenplaatsing.active {
     opacity: 100%;
-    z-index: 1;
+    z-index: 3;
 }
 
 #Sorterenplaatsing,
@@ -360,9 +361,9 @@ h5,
     margin-bottom: 0.5em;
 }
 
-#Sorterenplaatsing input[type=radio] {
-    margin-left: 5%;
-    margin-bottom: 1.5em;
+#Sorterenplaatsing input[type="radio"],
+#Categorieenplaatsing input[type="checkbox"] {
+    /*    margin: 1em 1em 1.5em 1em;*/
 }
 
 .keuzesform {
@@ -376,38 +377,24 @@ h5,
 }
 
 #Categorieenplaatsing {
-    margin-left: 10%;
-    z-index: 3;
-    opacity: 0%;
+    position: absolute;
+    left: 6.4em;
 }
 
-#Categorieenplaatsing.active {
+#Vertelperspectiefplaatsing {
+    position: absolute;
+    left: 16em;
     opacity: 100%;
 }
 
+@media (min-width: 52em) {
 
-@media (min-width: 53em) {
     #Sorterenplaatsing,
-    #Categorieenplaatsing {
+    #Categorieenplaatsing,
+        {
         display: inline-block;
     }
 }
-
-/* Radiobuttons styling */
-
-/*
-input[type=radio] {
-    opacity: 0;
-      cursor: pointer;
-}
-*/
-
-/*
-.radio input + label::before {
-    content:
-
-}
-*/
 
 /* De verhalen */
 
@@ -486,10 +473,6 @@ main article {
     top: 8.7em;
 }
 
-.bijnauitgelezen img {
-    /*    border-bottom: 1em double #24b5c9;*/
-}
-
 .bijnauitgelezen div {
     background-color: #24b5c9;
     display: inline-block;
@@ -507,8 +490,6 @@ main article {
 .bijnauitgelezen h3 {
     margin-top: 0em;
 }
-
-
 
 /* Footer */
 
@@ -646,44 +627,52 @@ main video {
     margin-bottom: 2em;
 }
 
-@media (min-width: 53em) {
-
-    .beoordelingenverhaal {
-        display: flex;
-        justify-content: space-between;
-        max-width: 60%;
-        margin: auto;
-    }
-}
-
-
 
 /* Responsive */
 
-@media (min-width: 53em)
+@media (min-width: 57em)
 /* Tablet */
 
     {
     #desktopversie {
         display: inherit;
     }
+
     video {
         display: none;
     }
+
     .filterensorterendesktop {
         display: flex;
         justify-content: flex-start;
         margin-left: 5%;
     }
+
     .filterensorterentelefoon {
         display: none;
     }
 }
 
 
+/* Inlogpagina */
 
+.inlog {
+    display: flex;
+    justify-content: center;
+    max-width: 60em;
+    margin: auto;
 
+}
 
-.inlogpagina {}
+.inlog fieldset {
+    border: none;
+    max-width: 30em;
+}
 
--------- transition ff uit zeten flex-grow
+.inlog fieldset input {
+    width: 100%;
+}
+
+.inlog input[type="submit"] {
+    width: 100%;
+}
