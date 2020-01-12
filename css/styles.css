@@ -19,7 +19,7 @@ body {
 .h1hoofdpagina {
     color: #ffffff;
     font-size: 2.750em;
-    font-family: Aspect, sans-serif;
+    font-family: Aspect, Arial, sans-serif;
     font-weight: 400;
     line-height: 1.2em;
     margin: auto;
@@ -39,7 +39,7 @@ body {
     margin-bottom: 0.5em;
     text-align: center;
     font-size: 2.750em;
-    font-family: Aspect, sans-serif;
+    font-family: Aspect, Arial, sans-serif;
     font-weight: 400;
     line-height: 4em;
 }
@@ -55,7 +55,7 @@ body {
 h2 {
     display: flex;
     justify-content: center;
-    font-family: Aspect, sans-serif;
+    font-family: Aspect, Arial, sans-serif;
     font-weight: 300;
     color: #55565A;
     text-align: center;
@@ -335,9 +335,7 @@ h5,
 
 /* Filteren en sorteren knoppen boven articles styling - desktop en tablet */
 
-#Sorterenplaatsing,
-#Categorieenplaatsing,
-#Vertelperspectiefplaatsing {
+.sortformstyling {
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
     width: 15em;
@@ -347,52 +345,135 @@ h5,
     padding: 1em;
     opacity: 0%;
     transition: .5s ease-in-out;
-}
-
-#Sorterenplaatsing.active,
-#Categorieenplaatsing.active {
-    opacity: 100%;
-    z-index: 3;
-}
-
-#Sorterenplaatsing,
-#Categorieenplaatsing {
     font-size: 1.2em;
     margin-bottom: 0.5em;
 }
 
-#Sorterenplaatsing input[type="radio"],
-#Categorieenplaatsing input[type="checkbox"] {
+.sortformstyling.active {
+    opacity: 100%;
+    z-index: 3;
+}
+
+.sortformstyling input[type="radio"],
+.sortformstyling input[type="checkbox"] {
     /*    margin: 1em 1em 1.5em 1em;*/
 }
 
-.keuzesform {
+label,
+legend {
     background-color: #ffffff;
     color: #55565A;
     font-size: .9em;
 }
 
-#Sorterenplaatsing {
-    margin-left: 5%;
+legend {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
 }
 
-#Categorieenplaatsing {
-    position: absolute;
+/* Input type en label bij elkaar */
+.sortformstyling span {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.25em;
+}
+
+.sortformstyling:first-of-type {
+    left: 5%;
+}
+
+.sortformstyling:nth-of-type(2) {
     left: 6.4em;
 }
 
-#Vertelperspectiefplaatsing {
-    position: absolute;
-    left: 16em;
+.sortformstyling:nth-of-type(3) {
+    left: 15em;
+}
+
+.sortformstyling:nth-of-type(4) {
+    left: 24.5em;
     opacity: 100%;
 }
 
+.sortformstyling:nth-of-type(4) p {
+    position: relative;
+    top: 3em;
+}
+
+/* Toggle Switch https://www.w3schools.com/howto/howto_css_switch.asp */
+/* Hier verberg je de checkbox */
+.switch input {
+    opacity: 0;
+    width: 5.5em;
+    height: 2.3em;
+    display: inline-block;
+}
+
+/* */
+.switch {
+    position: absolute;
+    display: inline-block;
+    
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #55565A50;
+    transition: .4s;
+    border-radius: 3em;
+}
+
+.slider:before {
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    height: 2em;
+    width: 2em;
+    background-color: #FFFFFF;
+    transition: .4s;
+}
+
+.slider:after {
+    border: 0.1em solid #55565A90;
+}
+
+input:checked + .slider {
+    background-color: #7CD3DF;
+    border: 0.1em solid #24B5C9;
+}
+
+input:checked + .slider:before {
+    transform: translate(100%);
+}
+
+input:checked + .slider:after{
+    border: 0.1em solid #24B5C9;
+}
+
+.slider:after {
+    border: 0.1em solid hotpink;
+}
+
+.slider:before {
+    border: 0.1em solid #55565A90;
+}
+
+.sortformstyling:nth-of-type(4) input {
+    border: 0.1em solid #55565A90;
+}
+
+///
+
+
 @media (min-width: 52em) {
 
-    #Sorterenplaatsing,
-    #Categorieenplaatsing,
-        {
-        display: inline-block;
+    .sortformstyling {
+        opacity: 0%;
     }
 }
 
@@ -669,7 +750,7 @@ main video {
 }
 
 .inlogpagina button {
-    font-family: Aspect, sans-serif;
+    font-family: Aspect, Arial, sans-serif;
     font-size: 1.5em;
     border: none;
     width: 10em;
@@ -733,7 +814,7 @@ input[type="password"] {
 
 input::placeholder {
     opacity: 50%;
-    font-style:italic;
+    font-style: italic;
 }
 
 input[type="email"]:focus,
@@ -753,4 +834,3 @@ input[type="email"]:invalid,
 input[type="password"]:invalid {
     border: 0.1em solid #06183D;
 }
-
