@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: "Aspect";
-    src: local("fonts/AspectRegular.otf") format("otf")
+    src: url("fonts/AspectRegular.woff");
 }
 
 body {
