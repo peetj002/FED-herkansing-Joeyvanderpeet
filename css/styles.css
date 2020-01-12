@@ -19,7 +19,7 @@ body {
 .h1hoofdpagina {
     color: #ffffff;
     font-size: 2.750em;
-    font-family: Aspect;
+    font-family: Aspect, sans-serif;
     font-weight: 400;
     line-height: 1.2em;
     margin: auto;
@@ -39,7 +39,7 @@ body {
     margin-bottom: 0.5em;
     text-align: center;
     font-size: 2.750em;
-    font-family: Aspect;
+    font-family: Aspect, sans-serif;
     font-weight: 400;
     line-height: 4em;
 }
@@ -55,7 +55,7 @@ body {
 h2 {
     display: flex;
     justify-content: center;
-    font-family: Aspect;
+    font-family: Aspect, sans-serif;
     font-weight: 300;
     color: #55565A;
     text-align: center;
@@ -132,7 +132,7 @@ header section ul li a {
 header section ul li {
     background-color: #F7F7F733;
     margin-bottom: 0.3em;
-    padding: 0.5em;
+    padding: 0.5em 1em;
     list-style: none;
 }
 
@@ -163,7 +163,6 @@ header section ul {
 
 .UitklappenHamburgermenu.active {
     transform: translate(0);
-
 }
 
 /* Navigatiebalk Eurostar desktop */
@@ -405,7 +404,7 @@ article {
     border-radius: 0.25em;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
     margin: 10px;
-    height: 33em;
+    height: 40em;
     margin-bottom: 30px;
     max-width: 410px;
     padding-bottom: 10px;
@@ -657,23 +656,101 @@ main video {
 
 /* Inlogpagina */
 
-.inlog {
+.inlogpagina {
+    margin: auto;
+    margin-bottom: 2em;
+    background-color: #ffffff;
+    border-radius: 0.25em;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
+    padding: 0em 1em 2em;
+    width: 35em;
+    font-family: Arial, sans-serif;
+    color: #55565A;
+}
+
+.inlogpagina button {
+    font-family: Aspect, sans-serif;
+    font-size: 1.5em;
+    border: none;
+    width: 10em;
+    padding: 1em;
+}
+
+.inlogpagina button:last-of-type {
+    background-color: #55565A30;
+    opacity: 50%;
+    cursor: pointer;
+}
+
+#inlogbuttons {
     display: flex;
     justify-content: center;
-    max-width: 60em;
-    margin: auto;
-
 }
 
 .inlog fieldset {
+    margin: auto;
     border: none;
-    max-width: 30em;
+    max-width: 35em;
+    width: 100%;
 }
 
 .inlog fieldset input {
     width: 100%;
 }
 
-.inlog input[type="submit"] {
-    width: 100%;
+.inlog input[type="email"],
+input[type="password"] {
+    padding: 1em;
+    margin: 0.25em 0em 1em;
+    border: 0.1em solid #24b5c9;
+    border-radius: 0.25em;
+    cursor: auto;
 }
+
+.inlog input[type="submit"] {
+    background-color: #FBDD0F;
+    border-radius: 4px;
+    box-shadow: #DEC204 0px 3px;
+    color: #55565A;
+    padding: 12px 24px;
+    font-size: 1em;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    margin-top: 0.5em;
+    cursor: pointer;
+}
+
+.inlog input[type="submit"]:hover {
+    background-color: #ffea6a;
+    transition: all .2s ease-in-out;
+}
+
+.inlog input[type="submit"]:active {
+    background-color: #24b5c9;
+    transition: all .1s ease;
+    box-shadow: #A8E2EA 0px 3px;
+}
+
+input::placeholder {
+    opacity: 50%;
+    font-style:italic;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border: 0.2em solid #24b5c9;
+    background-color: #A8E2EA;
+    color: #06183D;
+}
+
+input[type="email"]:valid,
+input[type="password"]:valid {
+    border: 0.2em solid #24b5c9;
+    background-color: #A8E2EA;
+}
+
+input[type="email"]:invalid,
+input[type="password"]:invalid {
+    border: 0.1em solid #06183D;
+}
+
