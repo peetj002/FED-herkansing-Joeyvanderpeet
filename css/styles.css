@@ -387,17 +387,23 @@ legend {
 }
 
 .sortformstyling:nth-of-type(3) {
-    left: 15em;
+    left: 16em;
 }
 
 .sortformstyling:nth-of-type(4) {
-    left: 24.5em;
+    left: 26em;
+    opacity: 0%;
+    height: 16em;
+}
+
+.sortformstyling:nth-of-type(4).active {
     opacity: 100%;
 }
 
 .sortformstyling:nth-of-type(4) p {
     position: relative;
     top: 3em;
+    font-size: .9em;
 }
 
 /* Toggle Switch https://www.w3schools.com/howto/howto_css_switch.asp */
@@ -485,9 +491,9 @@ article {
     border-radius: 0.25em;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
     margin: 10px;
-    height: 40em;
+    height: 37em;
     margin-bottom: 30px;
-    max-width: 410px;
+    max-width: 25em;
     padding-bottom: 10px;
 }
 
