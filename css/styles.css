@@ -478,7 +478,7 @@ input:checked + .slider:after{
 ///
 
 
-@media (min-width: 52em) {
+@media (min-width: 50em) {
 
     .sortformstyling {
         display: block;
