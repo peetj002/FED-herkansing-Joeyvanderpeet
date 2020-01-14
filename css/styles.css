@@ -240,11 +240,11 @@ header section ul li a {
     background-size: cover;
     height: 20em;
     border-bottom: 8px solid #24b5c9;
-    margin-bottom: 25px;
+    margin-bottom: 1.7em;
     padding: 5em 5em 2em 2em;
 }
 
-/* Header + knop */
+/* Headerfoto */
 
 #bannerfoto a {
     position: relative;
@@ -254,22 +254,37 @@ header section ul li a {
 
 /* Filteren en sorteren knoppen boven articles styling - mobiel */
 
-main section:nth-of-type(1) a, main section:nth-of-type(2) button {
-    
-}
-
-.filteren,
-.buttonfilterensorteren {
+main section:nth-of-type(1) a,
+main section:nth-of-type(2) button {
     background-color: #ffffff;
-    border-radius: 8px;
+    border-radius: 0.5em;
     color: #55565A;
     font-size: 1em;
-    font-weight: normal;
-    padding-left: 20px;
-    padding: 10px;
+    padding: 0.8em;
+    margin: 0.5em;
+    transition: .5s ease;
+}
+
+main section:nth-of-type(1) a {
+    display: inline-block;
+    position: relative;
+    left: 3em;
+    margin-left: 5%;
     text-decoration: none;
+}
+
+main section:nth-of-type(2) button {
     border: none;
-    margin-right: 0.5em;
+}
+
+main section:nth-of-type(1) a:hover,
+main section:nth-of-type(2) button:hover {
+    background-color: rgba(148, 148, 148, 0.2);
+}
+
+main section:nth-of-type(2) button.active {
+    background-color: #028097;
+    color: #ffffff;
     transition: .5s ease;
 }
 
@@ -279,20 +294,11 @@ main section:nth-of-type(1) a, main section:nth-of-type(2) button {
     transition: .5s ease;
 }
 
-.filterenen:hover {
-    background-color: rgba(148, 148, 148, 0.2);
-    transition: all .2s ease-in-out;
-}
-
-.filterensorterentelefoon {
-    padding: 10px;
-    margin-left: 5%;
-}
-
-.filterensorterentelefoon img,
-.filterensorterendesktop img {
-    width: 10px;
-    height: 10px;
+/* Pijltjes naar beneden */
+main > section > a > img,
+main > section > button > img {
+    width: 0.8em;
+    height: 0.8em;
 }
 
 .filterensorterendesktop {
