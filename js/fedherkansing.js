@@ -14,7 +14,7 @@ Hamburgericon.addEventListener('click', klapHamburgeruit);
 // Sorteren
 
 var ButtonAZ = document.querySelector('.filterensorterendesktop button:nth-of-type(1)');
-var FormulierAZ = document.querySelector('#Sorterenplaatsing');
+var FormulierAZ = document.querySelector('.sortformstyling:nth-of-type(1)');
 var PijltjeAZ = document.querySelector('.filterensorterendesktop button:nth-of-type(1) img');
 var Verhalen = document.querySelector('#articles');
 
@@ -40,7 +40,7 @@ ButtonAZ.addEventListener('click', klapSorterenuit);
 // Categorieën
 
 var Buttoncategorie = document.querySelector('.filterensorterendesktop button:nth-of-type(2)');
-var Formuliercategorie = document.querySelector('#Categorieenplaatsing');
+var Formuliercategorie = document.querySelector('.sortformstyling:nth-of-type(2)');
 var Pijltjecategorie = document.querySelector('.filterensorterendesktop button:nth-of-type(2) img');
 var Verhalen = document.querySelector('#articles');
 
