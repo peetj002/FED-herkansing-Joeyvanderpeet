@@ -5,10 +5,10 @@
 }
 
 @font-face {
-    font-family: "Aspect";
-    src: url("fonts/AspectRegular.woff") format("woff");
+    font-family: Aspect;
+    src: url(fonts/aspectregular.woff);
 }
-
+/* format("woff");*/
 
 body {
     background-color: #FFFFFF;
@@ -23,15 +23,11 @@ body {
     font-family: "Aspect", Arial, sans-serif;
     font-weight: 400;
     line-height: 1.2em;
-    margin: auto;
-    max-width: 80%;
-    position: absolute;
     width: 10em;
     text-shadow: 1px 1px 10px #000000;
     text-transform: uppercase;
     margin-left: 3%;
 }
-
 
 .h1verhalen {
     color: #06183D;
@@ -421,7 +417,7 @@ legend {
 .switch {
     position: absolute;
     display: inline-block;
-    
+
 }
 
 .slider {
@@ -459,7 +455,7 @@ input:checked + .slider:before {
     transform: translate(100%);
 }
 
-input:checked + .slider:after{
+input:checked + .slider:after {
     border: 0.1em solid #24B5C9;
 }
 
