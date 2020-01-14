@@ -9,8 +9,6 @@
     src: url(../fonts/aspectregular.woff);
 }
 
-/* format("woff");*/
-
 body {
     background-color: #FFFFFF;
     font-family: Arial, sans-serif;
@@ -358,13 +356,6 @@ main section:nth-of-type(2) img:nth-of-type(1).active {
     }
 }
 
-/*
-
-.sortformstyling input[type="radio"],
-.sortformstyling input[type="checkbox"] {
-        margin: 1em 1em 1.5em 1em;
-}
-*/
 legend {
     font-size: .9em;
     margin-bottom: 0.5em;
@@ -383,11 +374,11 @@ label {
 }
 
 .sortformstyling:first-of-type {
-    left: 5%;
+    left: 4em;
 }
 
 .sortformstyling:nth-of-type(2) {
-    left: 6.4em;
+    left: 8.5em;
 }
 
 .sortformstyling:nth-of-type(3) {
@@ -395,16 +386,10 @@ label {
 }
 
 .sortformstyling:nth-of-type(4) {
-    left: 26em;
+    left: 25.8em;
     height: 11.5em;
     width: 14em;
 }
-
-/*
-.sortformstyling:nth-of-type(4).active {
-    opacity: 100%;
-}
-*/
 
 .sortformstyling:nth-of-type(4) p {
     position: relative;
