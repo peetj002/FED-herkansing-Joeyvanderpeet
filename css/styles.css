@@ -530,35 +530,31 @@ main article {
     opacity: 30%;
 }
 
-
-
 /* Bijna uitgelezen verhalen */
-
-.bijnauitgelezen a {
-    position: relative;
-    top: 12em;
+.bijnauitgelezen {
+    height: 26em;
 }
-
-.bijnauitgelezen:nth-of-type(2) a {
-    top: 8.7em;
+.bijnauitgelezen h3 {
+    margin: 0em 1em;
 }
-
 .bijnauitgelezen div {
     background-color: #24b5c9;
     display: inline-block;
     height: 0.4em;
     position: relative;
     width: 15em;
-    margin-bottom: 1em;
-    z-index: 1;
+    top: -1em;
 }
 
 .bijnauitgelezen:nth-of-type(2) div {
     width: 3em;
 }
-
-.bijnauitgelezen h3 {
-    margin-top: 0em;
+.bijnauitgelezen a {
+    position: relative;
+    top: 5em;
+}
+.bijnauitgelezen:nth-of-type(2) a {
+    top: 2em;
 }
 
 /* Footer */
@@ -566,7 +562,7 @@ main article {
 footer {
     background-color: #F2F2F2;
     border-top: 1px solid #e6e6e7;
-    padding: 10px;
+    padding: 1em;
 }
 
 /* Filteren en sorteren wel kloppend!! */
