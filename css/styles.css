@@ -43,15 +43,13 @@ body {
     line-height: 4em;
 }
 
-/*
-@media (min-width: 84.9em) {
+@media (min-width: 75em) {
     .h1verhalen {
         position: relative;
-        top: 1.2em;
+        top: 1.1em;
         margin-bottom: 2em;
     }
 }
-*/
 
 h2 {
     font-family: Aspect, Arial, sans-serif;
@@ -75,6 +73,8 @@ main div {
 h3 {
     color: #4A4949;
     font-size: 1.3em;
+    display: block;
+    margin: auto;
     margin-left: 5%;
     margin-bottom: 0.25em;
     font-weight: 700;
@@ -102,6 +102,11 @@ p {
 .geleknopgestyled:hover {
     background-color: #ffea6a;
 }
+
+.hidden {
+    display: none;
+}
+
 
 /*
 
@@ -150,6 +155,7 @@ header section ul li {
     margin-bottom: 0.3em;
     padding: 0.5em 1em;
     list-style: none;
+    transition: .3s ease-in-out;
 }
 
 header section ul li:nth-of-type(3),
@@ -163,7 +169,7 @@ header section ul li:nth-of-type(4) {
 
 header section ul li a {
     color: #ffffff;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 700;
     line-height: 1.8em;
     text-decoration: none;
@@ -222,6 +228,10 @@ header section ul li a {
         margin-right: 5%;
     }
 
+    header section ul li:hover {
+        background: #ffffff50;
+    }
+
     .current {
         box-shadow: 0px 4px 0px 0px #FBDD0F inset;
     }
@@ -263,6 +273,7 @@ main section:nth-of-type(2) button {
     padding: 0.8em;
     margin: 0.5em;
     transition: .5s ease;
+    cursor: pointer;
 }
 
 main section:nth-of-type(1) a {
@@ -277,21 +288,19 @@ main section:nth-of-type(2) button {
     border: none;
 }
 
-main section:nth-of-type(1) a:hover,
-main section:nth-of-type(2) button:hover {
-    background-color: rgba(148, 148, 148, 0.2);
-}
-
 main section:nth-of-type(2) button.active {
     background-color: #028097;
     color: #ffffff;
     transition: .5s ease;
 }
 
-.buttonfilterensorteren.active {
+main section:nth-of-type(2) button.active:hover {
     background-color: #028097;
-    color: #ffffff;
-    transition: .5s ease;
+}
+
+main section:nth-of-type(1) a:hover,
+main section:nth-of-type(2) button:hover {
+    background-color: rgba(148, 148, 148, 0.2);
 }
 
 /* Pijltjes naar beneden */
@@ -301,20 +310,31 @@ main > section > button > img {
     height: 0.8em;
 }
 
-.filterensorterendesktop {
+main section:nth-of-type(2) {
     display: none;
 }
 
-.filterensorterendesktop img:nth-of-type(1) {
+main section:nth-of-type(2) img:nth-of-type(1) {
     transition: .5s ease-in-out;
 }
 
-.filterensorterendesktop img:nth-of-type(1).active {
+main section:nth-of-type(2) img:nth-of-type(1).active {
     transform: rotate(180deg);
 }
 
-.hidden {
-    display: none;
+@media (min-width: 50em)
+
+/* Tablet */
+    {
+    main > section:nth-of-type(1) {
+        display: none;
+    }
+
+    main section:nth-of-type(2) {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 5%;
+    }
 }
 
 /* Filteren en sorteren knoppen boven articles styling - desktop en tablet */
@@ -324,36 +344,40 @@ main > section > button > img {
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;
     width: 15em;
-    margin-top: 0.3em;
     border-radius: 0.25em;
     position: absolute;
     padding: 1em;
-    opacity: 0%;
+    opacity: 100%;
     transition: .5s ease-in-out;
     font-size: 1.2em;
-    margin-bottom: 0.5em;
+    color: #55565A;
 }
 
 .sortformstyling.active {
     opacity: 100%;
-    z-index: 3;
+    z-index: 1;
 }
+
+@media (min-width: 50em) {
+    .sortformstyling {
+        display: block;
+    }
+}
+
+/*
 
 .sortformstyling input[type="radio"],
 .sortformstyling input[type="checkbox"] {
-    /*    margin: 1em 1em 1.5em 1em;*/
+        margin: 1em 1em 1.5em 1em;
 }
-
-label,
+*/
 legend {
-    background-color: #ffffff;
-    color: #55565A;
     font-size: .9em;
+    margin-bottom: 0.5em;
 }
 
-legend {
-    font-size: 1.1em;
-    margin-bottom: 0.5em;
+label {
+    font-size: .7em;
 }
 
 /* Input type en label bij elkaar */
@@ -377,36 +401,39 @@ legend {
 
 .sortformstyling:nth-of-type(4) {
     left: 26em;
-    opacity: 0%;
-    height: 16em;
+    height: 10.5em;
 }
 
+/*
 .sortformstyling:nth-of-type(4).active {
     opacity: 100%;
 }
+*/
 
 .sortformstyling:nth-of-type(4) p {
     position: relative;
     top: 3em;
-    font-size: .9em;
+    padding: 0;
+    font-size: .7em;
 }
 
 /* Toggle Switch https://www.w3schools.com/howto/howto_css_switch.asp */
-/* Hier verberg je de checkbox */
+
+/* Hier verberg je de checkbox en geef je de grootte aan van de switch en verborgen checkbox */
 .switch input {
     opacity: 0;
-    width: 5.5em;
+    width: 4.8em;
     height: 2.3em;
     display: inline-block;
 }
 
-/* */
+/* Hier maak je van de ruimte het label en neemt 'ie de groottes van hierboven */
 .switch {
     position: absolute;
     display: inline-block;
-
 }
 
+/* Hier plaats je de slider over de checkbox en geef je de achtergrond een kleur */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -415,39 +442,27 @@ legend {
     right: 0;
     bottom: 0;
     background-color: #55565A50;
-    transition: .4s;
+    transition: .3s;
     border-radius: 3em;
 }
 
+/* */
 .slider:before {
-    border-radius: 50%;
+    border-radius: 100%;
     position: absolute;
     content: "";
     height: 2em;
     width: 2em;
     background-color: #FFFFFF;
-    transition: .4s;
-}
-
-.slider:after {
-    border: 0.1em solid #55565A90;
+    transition: .3s;
 }
 
 input:checked + .slider {
-    background-color: #7CD3DF;
-    border: 0.1em solid #24B5C9;
+    background-color: #24b5c9;
 }
 
 input:checked + .slider:before {
     transform: translate(100%);
-}
-
-input:checked + .slider:after {
-    border: 0.1em solid #24B5C9;
-}
-
-.slider:after {
-    border: 0.1em solid hotpink;
 }
 
 .slider:before {
@@ -457,17 +472,6 @@ input:checked + .slider:after {
 .sortformstyling:nth-of-type(4) input {
     border: 0.1em solid #55565A90;
 }
-
-///
-
-
-@media (min-width: 50em) {
-
-    .sortformstyling {
-        display: block;
-    }
-}
-
 
 /* De verhalen */
 
@@ -713,16 +717,6 @@ main video {
     }
 
     video {
-        display: none;
-    }
-
-    .filterensorterendesktop {
-        display: flex;
-        justify-content: flex-start;
-        margin-left: 5%;
-    }
-
-    .filterensorterentelefoon {
         display: none;
     }
 }
